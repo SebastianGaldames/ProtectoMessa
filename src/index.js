@@ -1,7 +1,6 @@
 const express = require('express');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
-
 const app = express();
 mongoose.connect('mongodb://localhost/messa-database')
     .then(db => console.log('DB is connected'))
@@ -9,6 +8,9 @@ mongoose.connect('mongodb://localhost/messa-database')
 
 //Settings
 app.set('port', process.env.PORT || 4000);
+
+
+
 
 //Middlewares
 app.use(morgan('dev'));
