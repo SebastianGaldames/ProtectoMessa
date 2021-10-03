@@ -9,6 +9,9 @@ const Producto = new Schema({
     Categoria: String,
     Genero: String,
     Temporada: String
+
+
+    
 });
 
 module.exports = mongoose.model('Producto', Producto);
