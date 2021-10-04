@@ -2,15 +2,17 @@ import express from 'express';
 import morgan from 'morgan';
 import cors from 'cors';
 import path from 'path';
+import mongoose from 'mongoose';
 //const express = require('express');
 //const morgan = require('morgan');
 //const cors=require('cors');
-const mongoose = require('mongoose');
+//const mongoose = require('mongoose');
 
 const app = express();
+mongoose.Promise=global.Promise;
 mongoose.connect('mongodb://localhost/messa-database')
     .then(db => console.log('DB is connected'))
-    .catch(err => console.error(err))
+    .catch(err => console.error(err));
 
 //Settings
 app.set('port', process.env.PORT || 4000);
@@ -23,7 +25,7 @@ app.use(express.static(path.join(__dirname,'public')));
 app.use(cors());
 
 //Routes
-app.use('/productos',require('./routes/productos'));
+//app.use('/productos',require('./routes/productos'));
 
 //Static files
 app.use(express.static(__dirname + '/public'));
