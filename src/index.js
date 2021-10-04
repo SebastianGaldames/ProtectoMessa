@@ -3,6 +3,7 @@ import morgan from 'morgan';
 import cors from 'cors';
 import path from 'path';
 import mongoose from 'mongoose';
+import router from './routes';
 //const express = require('express');
 //const morgan = require('morgan');
 //const cors=require('cors');
@@ -14,8 +15,7 @@ mongoose.connect('mongodb://localhost/messa-database')
     .then(db => console.log('DB is connected'))
     .catch(err => console.error(err));
 
-//Settings
-app.set('port', process.env.PORT || 4000);
+
 
 //Middlewares
 app.use(morgan('dev'));
@@ -25,7 +25,10 @@ app.use(express.static(path.join(__dirname,'public')));
 app.use(cors());
 
 //Routes
-//app.use('/productos',require('./routes/productos'));
+app.use('/api',router);
+
+//Settings
+app.set('port', process.env.PORT || 4000);
 
 //Static files
 app.use(express.static(__dirname + '/public'));
