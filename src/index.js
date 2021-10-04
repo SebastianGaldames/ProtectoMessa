@@ -11,7 +11,7 @@ import router from './routes';
 
 const app = express();
 mongoose.Promise=global.Promise;
-mongoose.connect('mongodb://localhost/messa-database')
+mongoose.connect('mongodb+srv://diegoaguilera4:Messa@cluster0.ltzow.mongodb.net/messa?retryWrites=true&w=majority')
     .then(db => console.log('DB is connected'))
     .catch(err => console.error(err));
 
