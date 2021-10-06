@@ -1,7 +1,6 @@
 <template>
   
   <div>
- 
     <b-navbar toggleable="lg" type="dark" variant="info">
       <b-navbar-brand href="#">NavBar</b-navbar-brand>
 
@@ -22,7 +21,15 @@
             <!--<router-link to="/Busqueda">-->
             
             <b-button id="botonBusqueda" href="Busqueda" v size="sm" class="my-2 my-sm-0" type="submit">GO</b-button>
-          
+
+            <router-link to="/Carrito">
+
+              <b-img src="https://img.icons8.com/dotty/80/000000/shopping-cart.png" width="40" height="40">
+              </b-img>
+            
+            </router-link>
+            
+            
             <!--</router-link>-->
             
           </b-nav-form>
@@ -30,28 +37,22 @@
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
-    <!-- Para imprimir el valor de lo que busca la persona --> 
-    <div class="mt-2">Value: {{ textoBusqueda }}</div>
-
   </div>
-      
-
 
 </template>
 
 
 <script>
 
-  export default {
-
-    
+    export default {
     data() {
       return {
         textoBusqueda:''
-        
       }
     }
   }
 
 </script>
+
+
 
