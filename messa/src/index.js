@@ -15,6 +15,7 @@ mongoose.connect('mongodb+srv://diegoaguilera4:Messa@cluster0.ltzow.mongodb.net/
     .then(db => console.log('DB is connected'))
     .catch(err => console.error(err));
 
+    
 
 
 //Middlewares
