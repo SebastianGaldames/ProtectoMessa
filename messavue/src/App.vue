@@ -1,11 +1,36 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/busqueda">Buscar</router-link> |
-      <router-link to="/carrito">Carrito</router-link>
-    </div>
+
+    <b-container class="bv-example-row">
+      <b-row>
+        <b-col align-self= "start">
+          <div>
+            <!-- aca va el logo -->
+            <b-navbar variant="faded" type="light">
+              <b-navbar-brand href="#">
+                <img src="https://placekitten.com/g/30/30" alt="Kitten">
+              </b-navbar-brand>
+            </b-navbar>
+          </div>
+        </b-col>
+        <b-col>
+          <div id="nav">
+            <!-- aca accesos superiores -->
+            <router-link to="/">Home</router-link> |
+            <router-link to="/about">About</router-link> |
+            <router-link to="/busqueda">Buscar</router-link> |
+            <router-link to="/carrito">Carrito</router-link>
+          </div>
+        </b-col>
+      </b-row>
+    </b-container>
+
+
+  
+
+
+
+    
     <router-view/>
   </div>
 </template>

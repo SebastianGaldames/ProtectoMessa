@@ -1,20 +1,41 @@
 <template>
   
   <div>
-    <b-navbar toggleable="lg" type="dark" variant="info">
-      <b-navbar-brand href="#">NavBar</b-navbar-brand>
-
-      <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
-
-      <b-collapse id="nav-collapse" is-nav>
-        <b-navbar-nav>
-          <b-nav-item href="#">Link</b-nav-item>
-          <b-nav-item href="#" disabled>Disabled</b-nav-item>
-        </b-navbar-nav>
-
-        <!-- Right aligned nav items -->
+    <b-navbar toggleable="lg" type="dark" class="color">
+            <!-- Alínea items a la derecha -->
         <b-navbar-nav class="ml-auto">
           <b-nav-form>
+            <!-- Items desplegables -->
+            <!-- Hombre -->
+            <b-nav-item-dropdown text="Hombre" right class= "letra">
+          <b-dropdown-item href="#">Pantalones</b-dropdown-item>
+          <b-dropdown-item href="#">Poleras</b-dropdown-item>
+          <b-dropdown-item href="#">Polerones</b-dropdown-item>
+          <b-dropdown-item href="#">Camisas</b-dropdown-item>
+          <b-dropdown-item href="#">Camisetas</b-dropdown-item>
+          <b-dropdown-item href="#">Casacas</b-dropdown-item>
+          <b-dropdown-item href="#">Abrigos</b-dropdown-item>
+            </b-nav-item-dropdown>
+            <!-- Mujer -->
+            <b-nav-item-dropdown text="Mujer" right class= "letra">
+          <b-dropdown-item href="#">Pantalones</b-dropdown-item>
+          <b-dropdown-item href="#">Poleras</b-dropdown-item>
+          <b-dropdown-item href="#">Polerones</b-dropdown-item>
+          <b-dropdown-item href="#">Camisas</b-dropdown-item>
+          <b-dropdown-item href="#">Camisetas</b-dropdown-item>
+          <b-dropdown-item href="#">Casacas</b-dropdown-item>
+          <b-dropdown-item href="#">Abrigos</b-dropdown-item>
+          <b-dropdown-item href="#">Vestidos</b-dropdown-item>
+            </b-nav-item-dropdown>
+            <!-- Temporada -->
+            <b-nav-item-dropdown text="Temporada" right class= "letra">
+          <b-dropdown-item href="#">Primavera-Verano 2021</b-dropdown-item>
+          <b-dropdown-item href="#">Otoño-Invierno 2021</b-dropdown-item>
+          <b-dropdown-item href="#">Primavera-Verano 2020</b-dropdown-item>
+          <b-dropdown-item href="#">Otoño-Invierno 2020</b-dropdown-item>
+            </b-nav-item-dropdown>
+
+
             <b-form-input id="formulario" v-model="textoBusqueda" size="sm" class="mr-sm-2" placeholder="Buscar"></b-form-input>
             
             <!-- Redirecciona a la Busqueda --> 
@@ -54,5 +75,14 @@
 
 </script>
 
+<style scoped>
+  .color{
+    background-color: #1c335f;
+  }
+  .letra{
+    font-size: 20px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+  }
+</style>
 
 
